@@ -1,10 +1,14 @@
 language: python
-
 python:
-  - "3.6"
-
+  - '3.6'
 install:
   - pip install -r requirements.txt
-
 script:
   - python manage.py test
+deploy:
+  provider: heroku
+  api_key:
+    secure: LmflgN/7mTzgkCVDh08heHbWjohD+Y1cnMtMyLYurFNVUd8HJaqU7GSGZJUOqAVeOw/QiVyx1nMxRwCoQJVF6o5smu6zTNGH73RoKNhdOjGNhfezws2jTw8MgBtsetRpqNoRM645z0GTUB7D/BuD6CyKEhnCYXdBrgYjhw+YvAIdqjoS0tvwi/+/+MHp4BEXHB9PQJwArlS2Q8AfEL12wmPU/ZKH6Qjq9j1XHZGanjjHMqi4Ue08wJgwuxVyBltqRLyeZVb10rOvWE8sge80uBLfWnRM9wfirMTwqrHfs/b7sfZHeb0BgXsC3CYVHizRYsHYOVVolBuegS+EuNhHYwKxJsbSOjI7mBqC66x1IwsSEvgBxxcBEoaky/2Tv7OS1gQOA2rRvqDkcxSLR9GueYGrrVkoqBQMMgpjSTkdfmFeZjrBqj9lisKetOL4p7rmFt+5n7udr7B+yonnQngtRkCC/wm9NteOVxl9xI6955xqEtA9+KRYA4Ate6jS7pXbvTnjvAe1ccce/B+2YM75KQfLwHeVYLExU8AnMORviER0DR3r3iofYKdwc7ErR6LUh1FjDsyXCAWBF5FGaeCMU9hT9jFb8o0mqBCFbH89Gw5r9Pkbg7+Ck+gpMAysDlKHO7qpuZpIkjxZTaXB3she0RFPY0DDfYu7UnO7Hf8N43A=
+  app: kbvl
+  on:
+    repo: mesenev/kbvl
